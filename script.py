@@ -17,9 +17,9 @@ def f(g, d, e):
     i = b''.join(h.decrypt(g[j:j+16]) for j in range(0, len(g), 16))
     return i[:-i[-1]]
 
-@app.route('/')
+@app.route('/out')
 def index():
-    return "Welcome to the SS Links API!"
+    return "当前地址正确，但节点路径不对，请在地址后添加正确的路径"
 
 @app.route('/')
 def output():

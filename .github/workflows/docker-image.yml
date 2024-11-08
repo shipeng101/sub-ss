@@ -25,4 +25,4 @@ jobs:
           tags: |
             spf20081/sub-ss:latest
           username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{ secrets.DOCKER_TOKEN }}

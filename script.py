@@ -21,7 +21,7 @@ def f(g, d, e):
 def index():
     return "Welcome to the SS Links API!"
 
-@app.route('/output')
+@app.route('/')
 def output():
     return send_file('sub/sub.txt')
 

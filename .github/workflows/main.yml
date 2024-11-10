@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Run 33.py
+      run: |
+        python 33.py
+        mkdir sub
+        mv sub.txt sub/sub.txt
+    - name: Commit and push changes
+      uses: EndBug/add-and-commit@v8
+      with:
+        message: "Update sub/sub.txt"
+        path: "sub"
+        branch: main

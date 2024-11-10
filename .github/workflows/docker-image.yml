@@ -35,7 +35,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: spf20081/sub-ss:1.0.0
+          tags: spf20081/sub-ss:1.0.2
           platforms: linux/amd64,linux/arm64 # build for multiple architectures
 
 

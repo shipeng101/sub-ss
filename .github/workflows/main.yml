@@ -16,12 +16,14 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: pip install -r requirements.txt
-    - name: Run 33.py
+    - name: Run script.py
       run: |
-        python 33.py 
+        python script.py 
     - name: Commit and push changes
       uses: EndBug/add-and-commit@v8
       with:
-        message: "Update sub/sub.txt"
+        message: "Update sub/jc.txt"
         path: "sub"
         branch: main
+    - name: Your step
+      run: echo $MY_VARIABLE # 添加了这行

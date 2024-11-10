@@ -16,9 +16,9 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: pip install -r requirements.txt
-    - name: Run script.py
+    - name: Run 33.py
       run: |
-        python script.py 
+        python 33.py 
     - name: Commit and push changes
       uses: EndBug/add-and-commit@v8
       with:

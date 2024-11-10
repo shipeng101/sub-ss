@@ -32,6 +32,10 @@ if __name__ == "__main__":
         l = binascii.unhexlify(k)
         m = f(l, d, e)
         n = json.loads(m)
+
+        # 创建 'sub/' 目录
+        os.makedirs("sub", exist_ok=True)
+
         with open("sub/sub.txt", "w") as file:
             for o in n['data']:
                 p = f"aes-256-cfb:{o['password']}@{o['ip']}:{o['port']}"
